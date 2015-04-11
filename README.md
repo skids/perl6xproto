@@ -5,10 +5,10 @@ X::Protocol:: Perl 6 modules for protocol exceptions
 
 ## Purpose
 
-The C<X::Protocol> superclass is a convenience for working with status results
+The X::Protocol superclass is a convenience for working with status results
 in protocol code.  Other than the quick subclass creation with sensible
 defaults, the primary convenience is the ability to smartmatch against
-terse C<Str> and C<Numeric> literals, or against regular expressions.
+terse Str and Numeric literals, or against regular expressions.
 
 Beyond that, the X::Protocol module repo serves as a place for
 protocol-specific subclasses so that long lists of human-readable
@@ -36,9 +36,9 @@ More finicky features are also available.  See the embedded pod.
         # stuff
         X::Protocol::BoxTruckOfFlashDrives.new(:status($result)).throw;
         # more stuff
-	CATCH {
+        CATCH {
             when 300 { plug_lots_of_flash_drives_in(); }
-	    when 100 { get_gas(); $_.resume }
-	    when 200 { }
+            when 100 { get_gas(); $_.resume }
+            when 200 { }
         }
     }
