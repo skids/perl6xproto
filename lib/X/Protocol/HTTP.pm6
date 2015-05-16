@@ -1,5 +1,5 @@
 use X::Protocol;
-class X::Protocol::HTTP is X::Protocol;
+unit class X::Protocol::HTTP is X::Protocol;
 
 =NAME X::Protocol::HTTP - Perl6 Exception class for HTTP results
 
