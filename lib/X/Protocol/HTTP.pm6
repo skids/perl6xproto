@@ -1,5 +1,8 @@
 use X::Protocol;
-unit class X::Protocol::HTTP is X::Protocol;
+# Since we may end up used by some important stuff, be backward compatible
+# for a while
+#unit class X::Protocol::HTTP is X::Protocol;
+class X::Protocol::HTTP is X::Protocol {
 
 =NAME X::Protocol::HTTP - Perl6 Exception class for HTTP results
 
@@ -135,3 +138,6 @@ it under the terms of the Perl Artistic License 2.0.
 =end LICENSE
 
 =SEE-ALSO C<Exception::(pm3) HTTP::Status(pm3)>
+
+# temporary backwards compatibility instead of "unit"
+}
