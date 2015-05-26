@@ -8,7 +8,8 @@
    "name" : "X::Protocol",
    "perl" : "v6.0.0",
    "provides" : {
-      "X::Protocol" : "lib/X/Protocol.pm6"
+      "X::Protocol" : "lib/X/Protocol.pm6",
+      "X::Protocol::HTTP" : "lib/X/Protocol/HTTP.pm6"
    },
    "support" : {
       "source" : "git://github.com/skids/perl6xproto.git"
