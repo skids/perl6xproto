@@ -30,7 +30,7 @@ More finicky features are also available.  See the embedded pod.
 
 ## Idioms
 
-    The most common use will be something like:
+The most common use will be something like this in a module:
 
     class X::Protocol::BoxTruckOfFlashDrives is X::Protocol {
         method protocol { "BoxTruckOfFlashDrives" }
@@ -43,6 +43,8 @@ More finicky features are also available.  See the embedded pod.
             }
         }
     }
+
+...and then the user of the module would do something like this:
 
     {
         # stuff
