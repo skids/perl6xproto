@@ -22,7 +22,7 @@ More finicky features are also available.  See the embedded pod.
 
     class X::Protocol::BoxTruckOfFlashDrives is X::Protocol {
         method protocol { "BoxTruckOfFlashDrives" }
-	method codes {
+        method codes {
             {
                 100 => "Out of gas";
                 200 => "Petabytes per hour.  Beat that!";
