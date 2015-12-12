@@ -51,8 +51,10 @@ The most common use will be something like this in a module:
         X::Protocol::BoxTruckOfFlashDrives.new(:status($result)).throw;
         # more stuff
         CATCH {
-            when 300 { plug_lots_of_flash_drives_in(); }
-            when 100 { get_gas(); $_.resume }
-            when 200 { }
+            when X::Protocol::BoxTruckOfFlashDrives {
+                when 300 { plug_lots_of_flash_drives_in(); }
+                when 100 { get_gas(); $_.resume }
+                when 200 { }
+            }
         }
     }
