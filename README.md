@@ -42,19 +42,24 @@ The most common use will be something like this in a module:
                 400 => "Hit a guard rail";
             }
         }
+        method severity {
+            when 200 { "success" };
+            "error";
+        }
     }
 
 ...and then the user of the module would do something like this:
 
     {
-        # stuff
-        X::Protocol::BoxTruckOfFlashDrives.new(:status($result)).throw;
-        # more stuff
+        # stuff that results in a status code in $result
+        X::Protocol::BoxTruckOfFlashDrives.new(:status($result)).toss;
+        # More stuff that happens if the exception is resumed or .toss
+        # did not throw an exception.
         CATCH {
             when X::Protocol::BoxTruckOfFlashDrives {
                 when 300 { plug_lots_of_flash_drives_in(); }
                 when 100 { get_gas(); $_.resume }
-                when 200 { }
             }
+            # Handle other kinds of errors
         }
     }
