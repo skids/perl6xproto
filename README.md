@@ -3,6 +3,7 @@ perl6xproto
 
 X::Protocol:: Perl 6 modules for protocol exceptions
 
+
 ## Purpose
 
 The X::Protocol superclass is a convenience for working with status results
@@ -27,6 +28,7 @@ error messages so they can be shared by different protocol implementations
 and maintained in one place.
 
 More finicky features are also available.  See the embedded pod.
+
 
 ## Idioms
 
