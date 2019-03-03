@@ -15,5 +15,5 @@
    "support" : {
       "source" : "https://github.com/skids/perl6xproto.git"
    },
-   "version" : "v0.0.1"
+   "version" : "0.0.1"
 }
